@@ -9,3 +9,8 @@
 <% end %>
 
 
+<%= form_for @post do |f| %>
+  <%= f.collection_select :category_name, Category.all, :name, :name %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
